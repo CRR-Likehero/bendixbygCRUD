@@ -1,0 +1,24 @@
+doctype html
+html
+    head
+        meta(charset='UTF-8')
+        meta(name='viewport' content='width=device-width, initial-scale=1.0')
+        link(rel='stylesheet', href='/css/login.css', type='text/css')
+        title #{title}
+
+    body
+        section.login_section
+            img.logo(src="img/herologo.svg", alt="logo")
+            div.login_wrapper
+                h2 login til backend
+                form.form
+                    div.form_group
+                        label(for="email") Emails address
+                        input#email(type="email", placeholder='you@example.com', required)
+                    div.form_group
+                        label(for="password") Password
+                        input#password(type="password", placeholder='••••••••', required)
+                    div.login_button_wrapper
+                        button.login_button log in
+                        
+    script(src='/js/bundle.js')

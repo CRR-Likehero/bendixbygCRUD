@@ -1,0 +1,34 @@
+{
+  "name": "Bendixbyg",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "start": "nodemon server.js",
+    "build:js": "webpack",
+    "watch:js": "webpack --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/polyfill": "^7.12.1",
+    "@hapi/joi": "^17.1.1",
+    "axios": "^0.21.1",
+    "bcrypt": "^5.0.0",
+    "crypto": "^1.0.1",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.10.14",
+    "pug": "^3.0.0",
+    "querystring": "^0.2.0",
+    "swiper": "^6.4.1",
+    "validator": "^13.1.17"
+  },
+  "devDependencies": {
+    "webpack": "^5.10.1",
+    "webpack-cli": "^4.2.0"
+  }
+}

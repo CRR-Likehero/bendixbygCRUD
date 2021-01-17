@@ -1,0 +1,33 @@
+section.content_section
+    each x in articles
+        div(class='modal' id=`${x.heading}`)
+            div.close_modal
+            h3= x.heading
+            p opgave
+            div
+                img(src=`/img/articles/${x.imagecover}`, alt=`${x.heading}`)
+            p= x.content
+    div.watermark
+    div.about
+        h2 om bendix byg
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis aperiam quod recusandae et sed expedita. Repellendus, rerum vitae sit animi adipisci voluptatum aliquid, accusantium perferendis, fugiat consectetur veritatis qui earum maiores ut nulla autem delectus deserunt illo! Aspernatur beatae impedit quis ex. Nemo cupiditate eos dignissimos, reprehenderit fugiat, quam, rerum exercitationem officiis aspernatur pariatur odit molestias quos nihil commodi id! Saepe reprehenderit aut qui minima mollitia, labore odio odit tenetur nemo suscipit earum magnam. Incidunt nihil id rem. Id sint voluptatum odit expedita earum, ipsam natus nam, tempora repudiandae veritatis, et eos quae alias nemo impedit distinctio deserunt saepe omnis rerum vel. Accusantium, aliquid commodi deserunt et quibusdam fugit vel? Debitis accusantium consequatur eveniet voluptas! Adipisci quos consequuntur quas tempora harum sapiente officiis? Repudiandae deserunt aut, debitis quae aliquid animi doloremque vel facere accusamus enim magni sunt perspiciatis rem assumenda reprehenderit distinctio eos quasi saepe? Sunt inventore ea quae earum.
+    div.wrapper
+        h2 projekter
+        div.cards_section
+            div.cards_container
+                div.cards_elements
+                    each article in articles
+                        img.item1(src=`/img/articles/${article.imagecover}`, alt=`${article.heading}`)
+                img(src="/img/ruler.svg", alt="ruler", class="cards_ruler")
+        img(src="/img/arrow.svg", alt="arrow", class="cards_arrow_left")
+        img(src="/img/arrow.svg", alt="arrow", class="cards_arrow_right")
+    div.testimonials_section
+        h2 hvad siger folk om os
+        div.swiper-container
+            img(src="/img/quoteleft.svg", alt="quotesignleft")
+            div.swiper-wrapper
+                p.swiper-slide Rigtig tilfreds med det nye køkken Bendix Byg har sat i for mig. Jeg fik en meget fair pris og de var super effektive
+                p.swiper-slide Rigtig tilfreds med det nye køkken Bendix Byg har sat i for mig. Jeg fik en meget fair pris og de var super effektive
+                p.swiper-slide Rigtig tilfreds med det nye køkken Bendix Byg har sat i for mig. Jeg fik en meget fair pris og de var super effektive 
+            div.swiper-pagination
+            img(src="/img/quoteright.svg", alt="quotesignright")
