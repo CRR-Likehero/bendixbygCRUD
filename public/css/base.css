@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Raleway, sans-serif;
 }
 
 /* Header section */
@@ -396,7 +399,7 @@ body.active {
 }
 
 .footer_content {
-    margin: 0em 20em 0em 20em;
+    margin: 0em 20em 0em 15em;
 }
 
 .footer_content h2 {
@@ -407,9 +410,8 @@ body.active {
 }
 
 .footer_info {
-    display: flex;
-    justify-content: space-between;
     color: white;
+    display: flex;
 }
 
 .info_1 p, .info_2 p {
@@ -537,11 +539,7 @@ body.active {
     }
 
     .footer_content {
-        margin-left: 4em;
-    }
-
-    .footer_info {
-        display: unset;
+        margin: 0em 0em 0em 4em;
     }
 
     .footer_madeby {
