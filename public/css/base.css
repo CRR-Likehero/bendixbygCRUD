@@ -484,13 +484,12 @@ body.active {
     }
 
     .hero_logo {
-        width: 22rem;
+        width: 20rem;
         height: 20rem;
     }
 
     .hero_heading {
-        margin: 0em 4em 3em 4em;
-        
+        margin: 0em 2em 3em 4em;
     }
 
     .watermark {
