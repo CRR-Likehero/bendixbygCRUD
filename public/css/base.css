@@ -44,7 +44,7 @@
     background-image: url(../img/burger.svg);
     background-repeat: no-repeat;
     background-position: center;
-    margin-right: 2em;
+    margin-right: 1em;
     cursor: pointer;
     width: 50px;
     height: 50px;
@@ -285,8 +285,8 @@ body.active {
 
 .modal {
     width: 80%;
-    height: auto;
-    background-color: black;
+    height: 45em;
+    background-color: rgb(37,37,37);
     z-index: 20;
     position: absolute;
     top: 357px;
@@ -294,8 +294,7 @@ body.active {
     display: none;
     flex-direction: column;
     align-items: center;
-    align-self: center;
-    
+    align-self: center
 }
 
 .close_modal {
@@ -313,17 +312,28 @@ body.active {
 
 .modal h3 {
     text-transform: uppercase;
-    margin: 1em 0em 1em 0em;
+    margin: 1em 0em 0.5em 0em;
+    font-size: 1.5em;
 }
 
 .modal p {
+    margin-bottom: 1.5em;
+}
+
+.modal_content {
+    overflow: scroll;
+}
+
+.modal_content p {
     text-align: center;
-    margin: 1em 2em 1em 2em;
+    margin: 2em 4em;
+    line-height: 1.5em;
 }
 
 .modal div img {
-    width: 450px;
-    height: 450px;
+    width: 350px;
+    height: 350px;
+    margin-bottom: 1.5em;
 }
 
 /* watermark */
@@ -487,38 +497,40 @@ body.active {
     }
 
     .about {
-        margin: 2rem 4rem;
+        margin: 4em 4em;
+        line-break: anywhere;
+        line-height: 1.2em;
+    }
+
+    .about h2 {
+        text-align: center;
     }
 
     .wrapper {
         margin: unset;
-        padding: 0em 4em;
+        padding: 2em 4em;
     }
 
     .wrapper h2 {
         margin: unset;
+        text-align: center;
     }
 
     .cards_section {
         margin: unset;
-        height: 51em;
     }
 
     .cards_elements {
         grid-template-columns: 250px;
     }
 
-    .cards_container {
-        height: 45em;
-    }
-
     .cards_arrow_left {
-        bottom: 429px;
+        bottom: 475px;
         left: 59px;
     }
 
     .cards_arrow_right {
-        bottom: 429px;
+        bottom: 475px;
         right: 59px;
     }
 
@@ -526,12 +538,28 @@ body.active {
         grid-row: unset;
     }
 
+    .modal {
+        bottom: 448px;
+        height: 42em;
+        width: 100%;
+        border-bottom: 1px solid orange;
+    }
+
+
+
+    .modal div img {
+        width: 220px;
+        height: 220px;
+    }
+
     .testimonials_section {
         margin: unset;
+        height: 30em;
     }
 
     .testimonials_section h2 {
-        margin: 2em 0em 2em 2.6em;
+        margin: 4em 0em 2em 0em;
+        text-align: center;
     }
 
     .swiper-container {
@@ -539,7 +567,15 @@ body.active {
     }
 
     .footer_content {
-        margin: 0em 0em 0em 4em;
+        margin: unset;
+    }
+
+    .footer_content h2 {
+        text-align: center;
+    }
+
+    .footer_info {
+        justify-content: center;
     }
 
     .footer_madeby {

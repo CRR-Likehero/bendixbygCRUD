@@ -6,7 +6,8 @@ section.content_section
             p opgave
             div
                 img(src=`/img/articles/${x.imagecover}`, alt=`${x.heading}`)
-            p= x.content
+            div.modal_content
+                p= x.content
     div.watermark
     div.about
         h2 om bendix byg
