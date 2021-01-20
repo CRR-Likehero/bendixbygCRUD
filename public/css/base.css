@@ -480,7 +480,7 @@ body.active {
 
     .hero_img {
         flex-direction: column-reverse;
-        justify-content: center;
+        height: unset;
     }
 
     .hero_logo {
@@ -489,7 +489,8 @@ body.active {
     }
 
     .hero_heading {
-        margin-bottom: 8rem;
+        margin: 0em 4em 3em 4em;
+        
     }
 
     .watermark {
