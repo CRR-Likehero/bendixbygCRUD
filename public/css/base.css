@@ -4,7 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Raleway, sans-serif;
+    font-family: Raleway, arial;
 }
 
 html {
@@ -19,6 +19,10 @@ html {
     position: sticky;
     top: 0;
     z-index: 2;
+}
+
+.header.active {
+    display: none;
 }
 
 .nav_ul {
@@ -37,8 +41,9 @@ html {
 }
 
 .nav_ul a img {
-   height: 90%;
    width: 4em;
+   font-size: 0.8em;
+   margin: 0.3em 0em 0.3em 0em;
    cursor: pointer; 
 }
 
@@ -175,6 +180,10 @@ body.active {
     position: relative;
 }
 
+.content_section.active {
+    height: 200vh;
+}
+
 .about {
     color: white;
     margin: 5em 15em 5em 15em;
@@ -191,6 +200,10 @@ body.active {
     background-color: rgb(37,37,37);
     margin: 0em 10em;
     padding: 0em 3em;
+}
+
+.wrapper.active {
+    display: none;
 }
 
 .wrapper h2 {
@@ -364,6 +377,10 @@ body.active {
     height: 25em;
 }
 
+.testimonials_section.active {
+    display: none;
+}
+
 .testimonials_section h2 {
     margin: 0.5em 0em 3em 3.3em ;
     color: orange;
@@ -472,8 +489,8 @@ body.active {
         justify-content: space-between;
     }
 
-    .nav_img {
-        margin-left: 0.3rem;
+    .nav_ul a img {
+        margin-left: 0.5em;
     }
 
     .burger_menu {
