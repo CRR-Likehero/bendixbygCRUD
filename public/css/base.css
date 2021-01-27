@@ -531,7 +531,7 @@ body.active {
 
     .wrapper {
         margin: unset;
-        padding: 2em 4em;
+        padding: 2em 2em;
     }
 
     .wrapper h2 {
@@ -549,12 +549,12 @@ body.active {
 
     .cards_arrow_left {
         bottom: 475px;
-        left: 59px;
+        left: 28px;
     }
 
     .cards_arrow_right {
         bottom: 475px;
-        right: 59px;
+        right: 28px;
     }
 
     .item5 {
