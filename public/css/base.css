@@ -562,11 +562,11 @@ body.active {
     }
 
     .modal {
-        bottom: 448px;
+        position: fixed;
         height: 42em;
         width: 100%;
         border-bottom: 1px solid orange;
-        top: unset;
+        top: 0;
     }
 
     .modal div img {

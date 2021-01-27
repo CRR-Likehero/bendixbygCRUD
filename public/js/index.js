@@ -75,19 +75,14 @@ if (item) {
     el.addEventListener('click', () => {
       const modal = el.getAttribute('alt')
 
-      document.getElementById(modal).style.display = 'flex'
-
-      if (window.innerWidth < 1050) {
-        window.scrollTo(0, 1080)
-      } else {
+        document.getElementById(modal).style.display = 'flex'
+      
         window.scrollTo(0, 1000)
-      }
-
-      mainNav.classList.toggle('active')
-      contentSection.classList.toggle('active')
-      wrapper.classList.toggle('active')
-      testimonialsSection.classList.toggle('active')
-      body.classList.toggle('active')
+        mainNav.classList.toggle('active')
+        contentSection.classList.toggle('active')
+        wrapper.classList.toggle('active')
+        testimonialsSection.classList.toggle('active')
+        body.classList.toggle('active')
     })
   });
 }
