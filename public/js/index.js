@@ -1,4 +1,5 @@
 import Swiper from 'swiper/bundle';
+import { drag } from './drag';
 import { login } from './login';
 import { logOut} from './logout';
 
@@ -39,7 +40,9 @@ const logoutBtn = document.querySelector('#logoutbtn');
 
 const item = document.querySelectorAll('.item1');
 
-const closeModal = document.querySelectorAll('.close_modal')
+const closeModal = document.querySelectorAll('.close_modal');
+
+const dragCards = document.querySelector('.cards_section');
 
 // DOM ACTIONS
 
@@ -94,6 +97,10 @@ if (closeModal) {
       body.classList.toggle('active')
     })
   })
+}
+
+if(dragCards) {
+ drag(dragCards);
 }
 
 if (loginForm) {
