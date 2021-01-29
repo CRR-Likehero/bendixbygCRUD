@@ -10,16 +10,12 @@ const swiper = new Swiper ('.swiper-container', {
     autoplay: {
         delay: 3500,
         disableOnInteraction: false,
-        reverseDirection: true
       },
       pagination: {
         el: '.swiper-pagination',
         clickable: true,
-        dynamicBullets: true,
       }
-
-  }
-);
+});
 
 // DOM ELEMENTS
 

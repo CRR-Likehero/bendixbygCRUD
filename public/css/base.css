@@ -243,19 +243,21 @@ body.active {
 
 .cards_arrow_left {
     position: absolute;
-    bottom: 429px;
+    bottom: 427px;
     left: 203px;
 }
 
 .cards_arrow_right {
     position: absolute;
     transform: rotate(180deg);
-    bottom: 429px;
+    bottom: 426px;
     right: 203px;
 }
 
 .cards_ruler {
     position: absolute;
+    height: 45px;
+    bottom: 8px;
 }
  
 .item1 {
@@ -553,7 +555,7 @@ body.active {
     }
 
     .cards_arrow_right {
-        bottom: 475px;
+        bottom: 474px;
         right: 28px;
     }
 
@@ -563,9 +565,8 @@ body.active {
 
     .modal {
         position: fixed;
-        height: 42em;
+        height: 100vh;
         width: 100%;
-        border-bottom: 1px solid orange;
         top: 0;
     }
 
