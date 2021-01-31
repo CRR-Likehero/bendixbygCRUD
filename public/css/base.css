@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;700&display=swap');
 
+:root {
+    --mainColor: #EF7F00;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -152,7 +156,7 @@ body.active {
 }
 
 .hero_heading span {
-    color: orange;
+    color: var(--mainColor);
     text-transform: uppercase;
 }
 
@@ -187,10 +191,11 @@ body.active {
 .about {
     color: white;
     margin: 5em 15em 5em 15em;
+    line-height: 1.7em;
 }
 
 .about h2 {
-    color: orange;
+    color: var(--mainColor);
     margin: 0em 0em 1em 0em;
     text-transform: uppercase;
 }
@@ -209,7 +214,7 @@ body.active {
 .wrapper h2 {
     margin: 0em 0em 0em 1.3em;
     padding: 1em 0em 1em 0em;
-    color: orange;
+    color: var(--mainColor);
     text-transform: uppercase;
 }
 
@@ -374,14 +379,14 @@ body.active {
   }
   
 .modal_content::-webkit-scrollbar-thumb {
-    background-color: orange;
+    background-color: var(--mainColor);
     border-radius: 20px;
     border: 6px solid transparent;
     background-clip: content-box;
   }
   
 .modal_content::-webkit-scrollbar-thumb:hover {
-    background-color: orangered;
+    background-color: gray;
   }
 
 .modal_content p {
@@ -425,7 +430,7 @@ body.active {
 
 .testimonials_section h2 {
     margin: 0.5em 0em 3em 3.3em ;
-    color: orange;
+    color: var(--mainColor);
     text-transform: uppercase;
 }
 
@@ -479,7 +484,7 @@ body.active {
 
 .footer_content h2 {
     text-transform: uppercase;
-    color: orange;
+    color: var(--mainColor);
     padding-top: 2em;
     margin-bottom: 2em;
 }
@@ -500,7 +505,7 @@ body.active {
 
 .footer_madeby {
     text-align: center;
-    color: orange;
+    color: var(--mainColor);
     display: flex;
     justify-content: center;
     margin-top: 3em;
@@ -539,13 +544,9 @@ body.active {
         display: unset;
     }
 
-    .hero_section {
-        height: unset;
-    }
-
     .hero_img {
         flex-direction: column-reverse;
-        height: unset;
+        height: 100%;
     }
 
     .hero_logo {
@@ -562,9 +563,7 @@ body.active {
     }
 
     .about {
-        margin: 4em 4em;
-        line-break: anywhere;
-        line-height: 1.2em;
+        margin: 4em 1.3em;
     }
 
     .about h2 {

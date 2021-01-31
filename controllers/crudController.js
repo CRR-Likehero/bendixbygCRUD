@@ -14,7 +14,8 @@ exports.createOne = async (req, res, next) => {
     try {
         const newArticle = await article.save()
         res.status(200).json({
-            data: newArticle
+            data: newArticle,
+            status:'succes'
         })
     } catch (err) {
         res.status(400).json({
@@ -35,7 +36,8 @@ exports.deleteOne = async (req, res, next) => {
 
         if (article) {
             return res.status(200).json({
-                message: `Succesfully deleted ${article.heading}`
+                message: `Succesfully deleted ${article.heading}`,
+                status: 'succes'
             });
         };
 

@@ -2,6 +2,8 @@ import Swiper from 'swiper/bundle';
 import { drag } from './drag';
 import { login } from './login';
 import { logOut} from './logout';
+import { deleteArticle } from './deleteArticle';
+import { creaateArticle, createArticle} from './createArticle';
 
 // SWIPER CONTAINER SETTINGS
 
@@ -44,7 +46,30 @@ const closeModal = document.querySelectorAll('.close_modal');
 
 const dragCards = document.querySelector('.cards_section');
 
+const delBtnArticle = document.querySelector('.article-button-del');
+
+const createArticleForm = document.querySelector('#createarticleform');
+
 // DOM ACTIONS
+
+if (delBtnArticle) {
+  delBtnArticle.addEventListener('click', e => {
+    e.preventDefault
+    const heading = document.querySelector('#article-heading').textContent;
+    deleteArticle(heading);
+  })
+}
+
+if (createArticleForm) {
+  createArticleForm.addEventListener('submit', e => {
+    e.preventDefault();
+    const heading = document.querySelector('#heading').value;
+    const content = document.querySelector('#content').value;
+    const imagecover = document.querySelector('#imagecover').value;
+    console.log(heading, content, imagecover)
+    createArticle(heading, content, imagecover)
+  })
+}
 
 if (menuToggle) {
   menuToggle.addEventListener('click', () => {

@@ -1,4 +1,4 @@
-section.content_section
+section.content_section#about
     each x in articles
         div(class='modal' id=`${x.heading}`)
             div.close_modal
@@ -8,7 +8,7 @@ section.content_section
                 img(src=`/img/articles/${x.imagecover}`, alt=`${x.heading}`)
             div.modal_content
                 p= x.content
-    div.watermark#about
+    div.watermark
     div.about
         h2 om bendix byg
         p Bendix - Byg er et nystartet tømrerfirma på Lolland - Falster, der kan hjælpe og rådgive dig med alt fra de små opgaver til de større projekter. Vi laver alt lige fra dit nye spisebord, til de større renoveringsprojekter. Vi har samarbejdspartnere inden for de fleste fag, Dermed kan vi formidle en bred vifte af opgaver. Så tøv endelig ikke med at ringe.

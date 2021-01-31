@@ -1,0 +1,35 @@
+doctype html
+html
+    head
+        meta(charset='UTF-8')
+        meta(name='viewport' content='width=device-width, initial-scale=1.0')
+        link(rel='stylesheet', href='/css/backend.css', type='text/css')
+        title #{title}
+    
+    body
+        section.backend-wrapper
+            div.menu
+                ul
+                    li
+                        a(href="/backend") Overblik
+                    li
+                        a(href="/createarticle") Nye projekter
+                    li
+                        a(href="#") Indstillinger
+                button#logoutbtn.login_button log out
+            div.content
+                form.form#createarticleform
+                    div.form_group
+                        label(for="heading") Heading
+                        input#heading(type="text", placeholder='type a heading here', required)
+                    div.form_group
+                        label(for="content") Content
+                        input#content(type="text", placeholder='type some content', required)
+                    div.form_group
+                        label(for="imagecover") imagecover
+                        input#imagecover(type="text", placeholder='imagecover', required)
+                    div.login_button_wrapper
+                        button.login_button Udgiv
+                div.content-watermark
+    
+    script(src='/js/bundle.js')

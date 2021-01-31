@@ -1,0 +1,31 @@
+doctype html
+html
+    head
+        meta(charset='UTF-8')
+        meta(name='viewport' content='width=device-width, initial-scale=1.0')
+        link(rel='stylesheet', href='/css/backend.css', type='text/css')
+        title #{title}
+    
+    body
+        section.backend-wrapper
+            div.menu
+                ul
+                    li
+                        a(href="/backend") Overblik
+                    li
+                        a(href="/createarticle") Nye projekter
+                    li
+                        a(href="#") Indstillinger
+                button#logoutbtn.login_button log out
+            div.content
+                for article in articles
+                    div.article-wrapper
+                        img.article-img(src=`/img/articles/${article.imagecover}`, alt="")
+                        div.article-name
+                            p#article-heading= article.heading
+                        div.article-buttons-wrapper
+                            button.article-button.article-button-del Slet
+                            button.article-button.article-button-edit Rediger
+                div.content-watermark
+    
+    script(src='/js/bundle.js')

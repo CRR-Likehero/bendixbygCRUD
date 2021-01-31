@@ -3,7 +3,7 @@ html
     head
         meta(charset='UTF-8')
         meta(name='viewport' content='width=device-width, initial-scale=1.0')
-        link(rel='stylesheet', href='/css/login.css', type='text/css')
+        link(rel='stylesheet', href='/css/backend.css', type='text/css')
         title #{title}
 
     body
@@ -20,5 +20,9 @@ html
                         input#password(type="password", placeholder='••••••••', required)
                     div.login_button_wrapper
                         button.login_button log in
+        img.dots-top(src="img/loginpage/dots.png", alt="dots")
+        img.triangle-top(src="img/loginpage/triangle.png", alt="triangle")
+        img.dots-bottom(src="img/loginpage/dots.png", alt="dots")
+        img.triangle-bottom(src="img/loginpage/triangle.png", alt="triangle")
                         
     script(src='/js/bundle.js')

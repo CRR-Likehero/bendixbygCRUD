@@ -10,7 +10,7 @@ export const logOut = async () => {
 
         if(res.data.status === 'succes') {
             alert('Logged out succesfully');
-            location.reload(true);
+            location.reload();
         }
 
         

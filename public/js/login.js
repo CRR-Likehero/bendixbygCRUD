@@ -14,7 +14,7 @@ export const login = async (email, password) => {
         if(res.data.data.status === 'succes') {
             alert('Logged in succesfully');
             window.setTimeout( () => {
-                location.assign('/secret');
+                location.assign('/backend');
             }, 1000);
         }
         
