@@ -108,6 +108,8 @@
     display: flex;
 }
 
+/* menu section styling */
+
 .menu {
     width: 20%;
     background-color: rgb(45,45,45);
@@ -141,6 +143,8 @@
     cursor: pointer;
 }
 
+/* content section styling */
+
 .content {
     width: 80%;
     height: 100vh;
@@ -149,7 +153,17 @@
     display: flex;
     flex-wrap: wrap;
     overflow-y: scroll;
-    
+    justify-content: center;
+}
+
+.content-article {
+    width: 80%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .content-watermark {
@@ -170,6 +184,7 @@
     height: 20em;
     background-color: rgb(45,45,45);
     margin: 1.5em 2em;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 
 .article-img {
@@ -198,6 +213,8 @@
     height: 100%;
     width: 50%;
     border: none;
+    cursor: pointer;
+    outline: none;
 }
 
 .article-button-del {
@@ -206,4 +223,36 @@
 
 .article-button-edit {
     background-color: yellow;
+}
+
+/* new project section */
+
+.projects-form {
+    width: 80%;
+    height: 100%;
+    margin: 1em 1em;
+}
+
+.form-box-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2em;
+    color: var(--mainColor);
+    font-size: 1em;
+}
+
+.projects-form input {
+    height: 2em;
+    width: 100%;
+    margin-top: 1em;
+    outline: none;
+}
+
+.projects-form textarea {
+    height: 15em;
+    width: 100%;
+    margin-top: 1em;
+    outline: none;
+    overflow-y: scroll;
+    resize: none;
 }

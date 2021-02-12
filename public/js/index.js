@@ -1,24 +1,9 @@
-import Swiper from 'swiper/bundle';
+import Swiper from 'swiper/swiper-bundle';
 import { drag } from './drag';
 import { login } from './login';
 import { logOut} from './logout';
 import { deleteArticle } from './deleteArticle';
-import { creaateArticle, createArticle} from './createArticle';
-
-// SWIPER CONTAINER SETTINGS
-
-const swiper = new Swiper ('.swiper-container', {
-    spaceBetween: 30,
-    centeredSlides: true,
-    autoplay: {
-        delay: 3500,
-        disableOnInteraction: false,
-      },
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      }
-});
+import { createArticle} from './createArticle';
 
 // DOM ELEMENTS
 
@@ -46,17 +31,19 @@ const closeModal = document.querySelectorAll('.close_modal');
 
 const dragCards = document.querySelector('.cards_section');
 
-const delBtnArticle = document.querySelector('.article-button-del');
+const delBtnArticle = document.querySelectorAll('.article-button-del');
 
 const createArticleForm = document.querySelector('#createarticleform');
 
 // DOM ACTIONS
 
 if (delBtnArticle) {
-  delBtnArticle.addEventListener('click', e => {
-    e.preventDefault
-    const heading = document.querySelector('#article-heading').textContent;
-    deleteArticle(heading);
+  delBtnArticle.forEach( (btn) => {
+      btn.addEventListener('click', e => {
+      e.preventDefault
+      const heading = e.target.parentNode.parentNode.children[1].children[0].textContent
+      deleteArticle(heading);
+    })
   })
 }
 
@@ -107,6 +94,20 @@ if (item) {
         wrapper.classList.toggle('active')
         testimonialsSection.classList.toggle('active')
         body.classList.toggle('active')
+
+        const swiper1 = new Swiper('.swiper1', {
+          slidesPerView: 1,
+          spaceBetween: 30,
+          loop: true,
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+        });
     })
   });
 }
@@ -143,3 +144,18 @@ if (logoutBtn) {
     logOut();
   });
 };
+
+// SWIPER CONTAINER SETTINGS
+
+const swiper2 = new Swiper ('.swiper2', {
+    spaceBetween: 30,
+    centeredSlides: true,
+    autoplay: {
+        delay: 3500,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      }
+});

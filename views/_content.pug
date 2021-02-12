@@ -1,34 +1,51 @@
-section.content_section#about
-    each x in articles
-        div(class='modal' id=`${x.heading}`)
-            div.close_modal
-            h3= x.heading
-            p opgave
-            div
-                img(src=`/img/articles/${x.imagecover}`, alt=`${x.heading}`)
-            div.modal_content
-                p= x.content
-    div.watermark
-    div.about
-        h2 om bendix byg
-        p Bendix - Byg er et nystartet tømrerfirma på Lolland - Falster, der kan hjælpe og rådgive dig med alt fra de små opgaver til de større projekter. Vi laver alt lige fra dit nye spisebord, til de større renoveringsprojekter. Vi har samarbejdspartnere inden for de fleste fag, Dermed kan vi formidle en bred vifte af opgaver. Så tøv endelig ikke med at ringe.
-    div.wrapper#projects
-        h2 projekter
-        div.cards_section
-            div.cards_container
-                div.cards_elements
-                    each article in articles
-                        img.item1(src=`/img/articles/${article.imagecover}`, alt=`${article.heading}`)
-                img(src="/img/ruler.png", alt="ruler", class="cards_ruler")
-        img(src="/img/arrow.svg", alt="arrow", class="cards_arrow_left")
-        img(src="/img/arrow.svg", alt="arrow", class="cards_arrow_right")
-    div.testimonials_section
-        h2 hvad siger vores kunder
-        div.swiper-container
-            img(src="/img/quoteleft.svg", alt="quotesignleft")
-            div.swiper-wrapper
-                p.swiper-slide Rigtig tilfreds med det nye køkken Bendix Byg har sat i for mig. Jeg fik en meget fair pris og de var super effektive
-                p.swiper-slide Rigtig tilfreds med det nye køkken Bendix Byg har sat i for mig. Jeg fik en meget fair pris og de var super effektive
-                p.swiper-slide Rigtig tilfreds med det nye køkken Bendix Byg har sat i for mig. Jeg fik en meget fair pris og de var super effektive 
-            div.swiper-pagination
-            img(src="/img/quoteright.svg", alt="quotesignright")
+div.section_wrapper
+    section.content_section#about
+        each x in articles
+            div(class='modal' id=`${x.heading}`)
+                div.close_modal
+                h3= x.heading
+                div.swiper-container.swiper1
+                    div.swiper-wrapper
+                        div.swiper-slide.swiper-slide1
+                            img(src=`/img/articles/${x.imagecover}`, alt=`${x.heading}`)                     
+                        div.swiper-slide.swiper-slide1
+                            img(src=`/img/articles/${x.imagecover}`, alt=`${x.heading}`)
+                        div.swiper-slide.swiper-slide1 
+                            img(src=`/img/articles/${x.imagecover}`, alt=`${x.heading}`)
+                        div.swiper-slide.swiper-slide1 
+                            img(src=`/img/articles/${x.imagecover}`, alt=`${x.heading}`)
+                        div.swiper-slide.swiper-slide1 
+                            img(src=`/img/articles/${x.imagecover}`, alt=`${x.heading}`)
+                        div.swiper-slide.swiper-slide1 
+                            img(src=`/img/articles/${x.imagecover}`, alt=`${x.heading}`)
+                        div.swiper-slide.swiper-slide1 
+                            img(src=`/img/articles/${x.imagecover}`, alt=`${x.heading}`)
+                    div.swiper-pagination
+                    div.swiper-button-next
+                    div.swiper-button-prev
+                div.modal_content
+                    p= x.content
+        div.watermark
+        div.about
+            h2 om bendix byg
+            p Bendix - Byg er et nystartet tømrerfirma på Lolland - Falster, der kan hjælpe og rådgive dig med alt fra de små opgaver til de større projekter. Vi laver alt lige fra dit nye spisebord, til de større renoveringsprojekter. Vi har samarbejdspartnere inden for de fleste fag, Dermed kan vi formidle en bred vifte af opgaver. Så tøv endelig ikke med at ringe.
+        div.wrapper#projects
+            h2 projekter
+            div.cards_section
+                div.cards_container
+                    div.cards_elements
+                        each article in articles
+                            img.item1(src=`/img/articles/${article.imagecover}`, alt=`${article.heading}`)
+                    img(src="/img/ruler.png", alt="ruler", class="cards_ruler")
+            img(src="/img/arrow.svg", alt="arrow", class="cards_arrow_left")
+            img(src="/img/arrow.svg", alt="arrow", class="cards_arrow_right")
+        div.testimonials_section
+            h2 hvad siger vores kunder
+            div.swiper-container.swiper2
+                img(src="/img/quoteleft.svg", alt="quotesignleft")
+                div.swiper-wrapper
+                    p.swiper-slide.swiper-slide2 Rigtig tilfreds med det nye køkken Bendix Byg har sat i for mig. Jeg fik en meget fair pris og de var super effektive
+                    p.swiper-slide.swiper-slide2 Rigtig tilfreds med det nye køkken Bendix Byg har sat i for mig. Jeg fik en meget fair pris og de var super effektive
+                    p.swiper-slide.swiper-slide2 Rigtig tilfreds med det nye køkken Bendix Byg har sat i for mig. Jeg fik en meget fair pris og de var super effektive 
+                div.swiper-pagination
+                img(src="/img/quoteright.svg", alt="quotesignright")

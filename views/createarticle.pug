@@ -17,19 +17,20 @@ html
                     li
                         a(href="#") Indstillinger
                 button#logoutbtn.login_button log out
-            div.content
-                form.form#createarticleform
-                    div.form_group
-                        label(for="heading") Heading
-                        input#heading(type="text", placeholder='type a heading here', required)
-                    div.form_group
-                        label(for="content") Content
-                        input#content(type="text", placeholder='type some content', required)
-                    div.form_group
-                        label(for="imagecover") imagecover
-                        input#imagecover(type="text", placeholder='imagecover', required)
+            div.content-article
+                form.projects-form#createarticleform
+                    div.form-box-wrapper
+                        label(for="overskrift") Overskrift
+                        input#heading(type="text", placeholder='Her kan du skrive en overskrift til dit projekt')
+                    div.form-box-wrapper
+                        label(for="indhold") Indhold
+                        textarea#content(name='content', type='text', placeholder='Her kan du skrive om dit projekt ')
+                    div.form-box-wrapper
+                        label(for="billeder") Billeder
+                        input#imagecover(type="text", placeholder='Billeder')
                     div.login_button_wrapper
                         button.login_button Udgiv
                 div.content-watermark
     
     script(src='/js/bundle.js')
+    

@@ -18,8 +18,9 @@ exports.createOne = async (req, res, next) => {
             status:'succes'
         })
     } catch (err) {
+
         res.status(400).json({
-            err
+          err
         });
 
     };
@@ -43,9 +44,7 @@ exports.deleteOne = async (req, res, next) => {
 
     } catch (err) {
 
-        res.status(400).json({
-            err
-        });
+        res.status(400).json(err);
     };
 
     next();
