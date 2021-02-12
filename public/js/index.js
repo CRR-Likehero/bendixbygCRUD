@@ -98,7 +98,6 @@ if (item) {
         const swiper1 = new Swiper('.swiper1', {
           slidesPerView: 1,
           spaceBetween: 80,
-          loop: true,
           pagination: {
             el: '.swiper-pagination',
             clickable: true,
