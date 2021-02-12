@@ -659,6 +659,10 @@ body.active {
         height: 45%;
     }
 
+    .swiper2 {
+        width: 80%;
+    }
+
     .testimonials_section {
         margin: unset;
         height: 30em;
