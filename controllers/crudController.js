@@ -49,3 +49,29 @@ exports.deleteOne = async (req, res, next) => {
 
     next();
 };
+
+exports.updateOne = async (req, res, next) => {
+    
+    const filter = { _id: req.headers.referer.split('/')[4] };
+    const update = { heading: req.body.heading, content: req.body.content };
+
+    
+    try {
+        let updatedArticle = await Article.findOneAndUpdate(filter, update, {
+            new: true
+        });
+
+        res.status(200).json({
+            message: 'Artiklen blev blev opdateret',
+            status: 'succes',
+            data: updatedArticle
+        });
+
+    } catch(err) {
+        res.status(400).json(err);
+        console.log(err)
+    }
+
+    next();
+
+}

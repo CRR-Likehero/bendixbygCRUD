@@ -9,7 +9,7 @@ export const logOut = async () => {
         });
 
         if(res.data.status === 'succes') {
-            alert('Logged out succesfully');
+            alert('Logged ud');
             location.reload();
         }
 

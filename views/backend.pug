@@ -20,12 +20,13 @@ html
             div.content
                 for article in articles
                     div.article-wrapper
-                        img.article-img(src=`/img/articles/${article.imagecover}`, alt="")
+                        img.article-img(src=`/img/articles/${article.imagecover}`, alt=`${article.heading}`)
                         div.article-name
                             p#article-heading= article.heading
                         div.article-buttons-wrapper
                             button.article-button.article-button-del Slet
-                            button.article-button.article-button-edit Rediger
+                            button.article-button.article-button-edit
+                                a(href=`/updatearticle/${article.id}`) Rediger 
                 div.content-watermark
     
     script(src='/js/bundle.js')

@@ -66,7 +66,7 @@ exports.loginUser = async (req, res) => {
     },
      process.env.JWT_SECRET,
      {
-         expiresIn: "10min"
+         expiresIn: "30min"
      }
     );
 

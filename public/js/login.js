@@ -12,7 +12,7 @@ export const login = async (email, password) => {
         });
 
         if(res.data.data.status === 'succes') {
-            alert('Logged in succesfully');
+            alert('Logged ind');
             window.setTimeout( () => {
                 location.assign('/backend');
             }, 1000);

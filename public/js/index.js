@@ -4,6 +4,7 @@ import { login } from './login';
 import { logOut} from './logout';
 import { deleteArticle } from './deleteArticle';
 import { createArticle} from './createArticle';
+import { updateArticle} from './updateArticle';
 
 // DOM ELEMENTS
 
@@ -34,16 +35,26 @@ const dragCards = document.querySelector('.cards_section');
 const delBtnArticle = document.querySelectorAll('.article-button-del');
 
 const createArticleForm = document.querySelector('#createarticleform');
+const updateArticleForm = document.querySelector('#updatearticleform');
 
 // DOM ACTIONS
 
 if (delBtnArticle) {
   delBtnArticle.forEach( (btn) => {
       btn.addEventListener('click', e => {
-      e.preventDefault
+      e.preventDefault();
       const heading = e.target.parentNode.parentNode.children[1].children[0].textContent
       deleteArticle(heading);
     })
+  })
+}
+
+if (updateArticleForm) {
+  updateArticleForm.addEventListener('submit', e => {
+    e.preventDefault();
+    const heading = document.querySelector('#editheading').value;
+    const content = document.querySelector('#editcontent').value;
+    updateArticle(heading, content);
   })
 }
 
@@ -53,8 +64,7 @@ if (createArticleForm) {
     const heading = document.querySelector('#heading').value;
     const content = document.querySelector('#content').value;
     const imagecover = document.querySelector('#imagecover').value;
-    console.log(heading, content, imagecover)
-    createArticle(heading, content, imagecover)
+    createArticle(heading, content, imagecover);
   })
 }
 

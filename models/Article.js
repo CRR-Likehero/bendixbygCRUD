@@ -5,8 +5,8 @@ const articleSchema = new mongoose.Schema ({
         type: String,
         required: [true, 'Please provide a heading'],
         unique: true
-
     },
+
     content: {
         type: String,
         required: [true, 'Please provide some content']

@@ -225,6 +225,12 @@
     background-color: yellow;
 }
 
+.article-button-edit a {
+    padding: 1.2em 4.2em;
+    text-decoration: none;
+    color: black;
+}
+
 /* new project section */
 
 .projects-form {
@@ -255,4 +261,27 @@
     outline: none;
     overflow-y: scroll;
     resize: none;
+}
+
+/* update project section */
+
+.update-article-img-container {
+    margin-top: 1.5em;
+    width: 60%;
+    height: 30%;
+    background-color: green;
+}
+
+.update-article-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#editheading{
+    height: 2em;
+    width: 100%;
+    margin-top: 1em;
+    padding-top: 0.2em;
+    outline: none;
 }

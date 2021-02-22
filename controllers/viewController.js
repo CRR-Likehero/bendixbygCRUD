@@ -16,12 +16,11 @@ exports.getOverview = async (req, res, next) => {
         res.status(400).json({
             err
         });
-
-        console.log(err)
     }
 };
 
 exports.secretRoute = async (req, res, next) => {
+
     const articles = await Article.find();
 
     try {
@@ -36,12 +35,10 @@ exports.secretRoute = async (req, res, next) => {
         res.status(400).json({
             err
         });
-
-        console.log(err)
     }
 };
 
-exports.createArticleRoute = async (req, res) => {
+exports.createArticleRoute = (req, res, next) => {
     try {
         res.status(200).render('createarticle', {
             title: 'Create Articles'
@@ -50,12 +47,28 @@ exports.createArticleRoute = async (req, res) => {
         res.status(400).json({
             err
         })
-
-        console.log(err)
     }
 };
 
-exports.logMeIn = (req, res) => {
+exports.updateArticleRoute = async (req, res, next) => {
+
+    const article = await Article.findById(req.params.id)
+
+    try {
+
+        res.status(200).render('updatearticle', {
+            title: 'Update Articles',
+            article: article
+        })
+
+    } catch (err) {
+        res.status(400).json({
+            err
+        })
+    }
+}
+
+exports.logMeIn = (req, res, next) => {
     res.status(200).render('login', {
         title: 'Log in'
     });

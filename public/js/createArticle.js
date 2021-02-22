@@ -14,8 +14,8 @@ export const createArticle = async (heading, content, imagecover) => {
         })
 
         if (res.data.status === 'succes') {
-            alert(`${heading} have succesfully been created`);
-            location.reload(true);
+            alert(`${heading} er blevet tilføjet til projekter`);
+            location.replace('/backend');
         }
 
     } catch (err) {

@@ -1,19 +1,20 @@
 import axios from 'axios';
 
-export const deleteArticle = async (x) => {
+export const updateArticle = async (heading, content) => {
 
     try {
         const res = await axios ({
-            method: 'DELETE',
+            method: 'PATCH',
             url: '/api/crud',
             data: {
-                heading: x
+                heading: heading,
+                content: content
             }
         })
 
         if (res.data.status === 'succes') {
-            alert(`${x} er blevet slettet fra hjemmesiden`);
-            location.reload();
+            alert('Artiklen er blevet opdateret');
+            location.replace('/backend')
         }
 
     } catch (err) {
