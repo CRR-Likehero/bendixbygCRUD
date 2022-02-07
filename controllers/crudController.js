@@ -54,7 +54,6 @@ exports.updateOne = async (req, res, next) => {
     
     const filter = { _id: req.headers.referer.split('/')[4] };
     const update = { heading: req.body.heading, content: req.body.content };
-
     
     try {
         let updatedArticle = await Article.findOneAndUpdate(filter, update, {

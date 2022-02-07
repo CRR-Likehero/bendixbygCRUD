@@ -14,7 +14,7 @@ export const updateArticle = async (heading, content) => {
 
         if (res.data.status === 'succes') {
             alert('Artiklen er blevet opdateret');
-            location.replace('/backend')
+            // location.replace('/backend')
         }
 
     } catch (err) {
